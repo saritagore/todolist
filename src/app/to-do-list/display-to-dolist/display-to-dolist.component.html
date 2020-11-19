@@ -1,0 +1,29 @@
+<div style="margin: 20px;">
+  <table>
+    <tr>
+
+        <th>Name</th>
+        <th style="border: 1px solid red;">
+          <p class="mb-0"> Status</p>
+          <button (click)="sortStatus('asc')">A-Sort</button>
+          <button (click)="sortStatus('dec')">D-Sort</button>
+        </th>
+        <th>
+          <p class="mb-0">Priority</p>
+          <button (click)="sortPriority('asc')">A-Sort</button>
+          <button (click)="sortPriority('dec')">D-Sort</button>
+        </th>
+        <th>Actions</th>
+
+    </tr>
+
+      <tr *ngFor = " let i of itemdata;let j = index">
+        <td >{{i.items}}</td>
+        <td style="border: 1px solid red;">{{i.status}}</td>
+        <td>{{i.priority}}</td>
+        <td><button (click)="editData(i)">Edit</button></td>
+        <td><button (click)="removeData(j)">Remove</button></td>
+      </tr>
+
+  </table>
+</div>

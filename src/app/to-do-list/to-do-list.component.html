@@ -1,0 +1,9 @@
+<div>
+  <h1>To Do List</h1>
+</div>
+<div class="upper">
+  <app-add-to-do-list (msg)="getdataFromChild($event)"></app-add-to-do-list>
+</div>
+<div class="lower">
+  <app-display-to-dolist [itemdata]="itemdata"></app-display-to-dolist>
+</div>

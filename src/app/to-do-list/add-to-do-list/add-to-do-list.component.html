@@ -1,0 +1,25 @@
+<div class="form-wrapper">
+  <form #toDoListForm="ngForm" (ngSubmit)="onSubmit(toDoListForm)">
+    <div>
+      <label>Name: </label>
+      <input type="text" [(ngModel)]="itemName" name="items" placeholder="Add new items">
+    </div>
+    <div>
+      <label>Select Status :</label>
+      <select [(ngModel)]="Status" name="status">
+        <option *ngFor="let s of status">{{s}}</option>
+      </select>
+    </div>
+    <div>
+      <label>Select Priority :</label>
+      <select [(ngModel)]="Priority" name="priority">
+        <option *ngFor="let p of priority">{{p}}</option>
+      </select>
+    </div>
+    <div class="btn-wrap">
+      <button type="submit" style="margin-right: 6px;">Add</button>
+      <button (click)="update()" type="button" style="margin-right: 6px;">Update</button>
+      <button (click)="empty()" type="button">Empty</button>
+    </div>
+  </form>
+</div>
